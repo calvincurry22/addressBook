@@ -1,0 +1,13 @@
+C:\Users\calvi\workspace\csharp\exercises\addressBook\obj\Debug\netcoreapp3.1\addressBook.csprojAssemblyReference.cache
+C:\Users\calvi\workspace\csharp\exercises\addressBook\obj\Debug\netcoreapp3.1\addressBook.AssemblyInfoInputs.cache
+C:\Users\calvi\workspace\csharp\exercises\addressBook\obj\Debug\netcoreapp3.1\addressBook.AssemblyInfo.cs
+C:\Users\calvi\workspace\csharp\exercises\addressBook\obj\Debug\netcoreapp3.1\addressBook.csproj.CoreCompileInputs.cache
+C:\Users\calvi\workspace\csharp\exercises\addressBook\bin\Debug\netcoreapp3.1\addressBook.exe
+C:\Users\calvi\workspace\csharp\exercises\addressBook\bin\Debug\netcoreapp3.1\addressBook.deps.json
+C:\Users\calvi\workspace\csharp\exercises\addressBook\bin\Debug\netcoreapp3.1\addressBook.runtimeconfig.json
+C:\Users\calvi\workspace\csharp\exercises\addressBook\bin\Debug\netcoreapp3.1\addressBook.runtimeconfig.dev.json
+C:\Users\calvi\workspace\csharp\exercises\addressBook\bin\Debug\netcoreapp3.1\addressBook.dll
+C:\Users\calvi\workspace\csharp\exercises\addressBook\bin\Debug\netcoreapp3.1\addressBook.pdb
+C:\Users\calvi\workspace\csharp\exercises\addressBook\obj\Debug\netcoreapp3.1\addressBook.dll
+C:\Users\calvi\workspace\csharp\exercises\addressBook\obj\Debug\netcoreapp3.1\addressBook.pdb
+C:\Users\calvi\workspace\csharp\exercises\addressBook\obj\Debug\netcoreapp3.1\addressBook.genruntimeconfig.cache
