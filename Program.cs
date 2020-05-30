@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace addressBook
 {
@@ -20,6 +21,14 @@ namespace addressBook
             public string LastName { get; set; }
             public string Email { get; set; }
             public string Address { get; set; }
+
+            public string FullName
+            {
+                get
+                {
+                    return $"{FirstName} {LastName}";
+                }
+            }
         }
 
         class AddressBook
@@ -28,6 +37,12 @@ namespace addressBook
             public void AddContact(Contact contactObj)
             {
                 _rolodex.Add(contactObj.Email, contactObj);
+            }
+
+            public Contact GetByEmail(string email)
+            {
+                KeyValuePair<string, Contact> foundKVP = _rolodex.First(pair => pair.Key == email);
+                return foundKVP.Value;
             }
         }
         static void Main(string[] args)
@@ -67,16 +82,16 @@ namespace addressBook
 
 
             // Try to addd a contact a second time
-            // try
-            // {
-            //     addressBook.AddContact(sue);
-            // }
-            // catch (ArgumentException)
-            // {
-            //     Console.WriteLine("This contact has already been added to this address book");
-            // }
+            try
+            {
+                addressBook.AddContact(sue);
+            }
+            catch (ArgumentException)
+            {
+                Console.WriteLine("This contact has already been added to this address book");
+            }
 
-            // PICK UP WITH THIS EXERCISE BELOW
+
 
             // Create a list of emails that match our Contacts
             List<string> emails = new List<string>()
@@ -88,17 +103,23 @@ namespace addressBook
 
             // // Insert an email that does NOT match a Contact
             emails.Insert(1, "not.in.addressbook@email.com");
-            Console.WriteLine("Hello");
 
             // //  Search the AddressBook by email and print the information about each Contact
-            // foreach (string email in emails)
-            // {
-            //     Contact contact = addressBook.GetByEmail(email);
-            //     Console.WriteLine("----------------------------");
-            //     Console.WriteLine($"Name: {contact.FullName}");
-            //     Console.WriteLine($"Email: {contact.Email}");
-            //     Console.WriteLine($"Address: {contact.Address}");
-            // }
+            foreach (string email in emails)
+            {
+                try
+                {
+                    Contact contact = addressBook.GetByEmail(email);
+                    Console.WriteLine("----------------------------");
+                    Console.WriteLine($"Name: {contact.FullName}");
+                    Console.WriteLine($"Email: {contact.Email}");
+                    Console.WriteLine($"Address: {contact.Address}");
+                }
+                catch (InvalidOperationException)
+                {
+                    Console.WriteLine("No contact available for this email address");
+                }
+            }
         }
     }
 }
